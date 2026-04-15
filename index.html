@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スウェーデンの医療保障制度</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="backdrop">
+    <div class="backdrop__orb backdrop__orb--blue"></div>
+    <div class="backdrop__orb backdrop__orb--gold"></div>
+    <div class="backdrop__grid"></div>
+  </div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar__inner">
+        <p class="eyebrow">Local Research Deck</p>
+        <h1>スウェーデンの<br>医療保障制度</h1>
+        <p class="lede">税財源を中心にした普遍的カバレッジ、地域分権、患者自己負担の上限制が核です。</p>
+        <div class="meta">
+          <div>
+            <span>更新日</span>
+            <strong>2026-04-15</strong>
+          </div>
+          <div>
+            <span>調査状態</span>
+            <strong>初版</strong>
+          </div>
+        </div>
+        <nav class="toc" id="toc"></nav>
+        <div class="sidebar__note">
+          <p>深掘りしたい論点を送ってください。次の版でこのスライドに追記していきます。</p>
+        </div>
+        <div class="sidebar__sweden">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="deck">
+      <header class="deck__header">
+        <div class="deck__controls">
+          <button id="prevBtn" class="nav-btn" type="button">← Prev</button>
+          <button id="nextBtn" class="nav-btn" type="button">Next →</button>
+        </div>
+        <div class="deck__progress">
+          <div class="progress-bar"><span id="progressFill"></span></div>
+          <span id="slideCounter">1 / 10</span>
+        </div>
+      </header>
+
+      <section class="slide is-active" data-title="全体像">
+        <div class="slide__content hero">
+          <div class="slide__badge">01</div>
+          <div class="hero__flag">
+            <span class="hero__flag-blue"></span>
+            <span class="hero__flag-gold hero__flag-gold--vertical"></span>
+            <span class="hero__flag-gold hero__flag-gold--horizontal"></span>
+          </div>
+          <p class="kicker">Overview</p>
+          <h2>制度の一言要約</h2>
+          <p class="hero__summary">
+            スウェーデンの医療保障制度は、<strong>税財源ベースのユニバーサルな医療保障</strong>を土台に、
+            <strong>21の地域圏</strong>が医療の主要責任を担い、<strong>290の自治体</strong>が高齢者・障害者ケアや学校保健を担う分権型モデルです。
+          </p>
+          <div class="hero__rail">
+            <span>Universal coverage</span>
+            <span>Regional governance</span>
+            <span>High-cost protection</span>
+          </div>
+          <div class="stat-grid">
+            <article class="stat-card">
+              <span class="stat-card__label">カバー範囲</span>
+              <strong>ほぼ全民</strong>
+              <p>居住者・就労者を中心に広く対象</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">主財源</span>
+              <strong>税</strong>
+              <p>地方税と公費が中核</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">公的支出比率</span>
+              <strong>86%</strong>
+              <p>総医療支出に占める公的支出, 2022年</p>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">医療費/GDP</span>
+              <strong>10.7%</strong>
+              <p>2022年, EU平均超</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="統治構造">
+        <div class="slide__content">
+          <div class="slide__badge">02</div>
+          <p class="kicker">Governance</p>
+          <h2>だれが何を担うのか</h2>
+          <div class="columns">
+            <article class="panel">
+              <h3>国</h3>
+              <ul>
+                <li>保健医療政策の大枠を決める</li>
+                <li>法制度、監督、全国的な方向付けを担う</li>
+                <li>厚生・保健関連の政府機関が基準やデータを支える</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>地域圏（21 Regions）</h3>
+              <ul>
+                <li>医療の資金調達、組織化、提供の主責任主体</li>
+                <li>プライマリケア、専門外来、病院医療を中心に担う</li>
+                <li>地域税を徴収できる</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>自治体（290 Municipalities）</h3>
+              <ul>
+                <li>高齢者・障害者の在宅/居住系ケア</li>
+                <li>学校保健</li>
+                <li>生活支援と医療の接続部分を担当</li>
+              </ul>
+            </article>
+          </div>
+          <p class="insight">
+            ポイントは、<strong>国がルールを示し、実装は地域と自治体が担う</strong>ことです。均てん化と地域差の管理が常に政策課題になります。
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-title="財源と保障">
+        <div class="slide__content">
+          <div class="slide__badge">03</div>
+          <p class="kicker">Financing</p>
+          <h2>保障の仕組みとお金の流れ</h2>
+          <div class="timeline">
+            <div class="timeline__item">
+              <span>1</span>
+              <div>
+                <h3>基本は税方式</h3>
+                <p>社会保険方式よりも、地方税と公費による資金調達の比重が大きいです。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>2</span>
+              <div>
+                <h3>普遍的カバレッジ</h3>
+                <p>居住・就労を基礎に、ほぼすべての人に医療アクセスを保障します。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>3</span>
+              <div>
+                <h3>自己負担はあるが上限つき</h3>
+                <p>外来受診や処方薬は一定の自己負担がある一方、高額化を防ぐ上限制が組み込まれています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="quote-box">
+            <p>自己負担はゼロではないが、家計破綻を防ぐために高額負担を抑える設計が制度の一部になっています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="患者負担">
+        <div class="slide__content">
+          <div class="slide__badge">04</div>
+          <p class="kicker">Out-of-Pocket</p>
+          <h2>患者負担の上限</h2>
+          <div class="columns columns--wide">
+            <article class="panel accent">
+              <h3>外来医療の高額負担保護</h3>
+              <p class="big-number">1,450 SEK</p>
+              <p>12か月の外来患者負担上限。全国共通の上限で、地域がより低い額を設定できるとされています。</p>
+            </article>
+            <article class="panel accent">
+              <h3>処方薬の高額負担保護</h3>
+              <p class="big-number">3,800 SEK</p>
+              <p>12か月の上限。<strong>2025年7月1日</strong>に <strong>2,900 SEK</strong> から引き上げられた点は要注意です。</p>
+            </article>
+          </div>
+          <div class="note-grid">
+            <article class="note-card">
+              <h3>地域差あり</h3>
+              <p>初診・再診・救急・無断キャンセル料などの細かい患者負担は地域で違います。</p>
+            </article>
+            <article class="note-card">
+              <h3>外来と入院は別</h3>
+              <p>外来の高額保護に、入院日額や証明書、ワクチンなどは含まれないことがあります。</p>
+            </article>
+            <article class="note-card">
+              <h3>歯科は別建て要素が強い</h3>
+              <p>一般医療と同じではなく、補助制度や対象条件が分かれています。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="受診フロー">
+        <div class="slide__content">
+          <div class="slide__badge">05</div>
+          <p class="kicker">Access</p>
+          <h2>受診の基本動線</h2>
+          <div class="process">
+            <article class="process__step">
+              <span>01</span>
+              <h3>まずプライマリケア</h3>
+              <p>登録先の医療センターや地域の窓口に連絡します。</p>
+            </article>
+            <article class="process__step">
+              <span>02</span>
+              <h3>医療保証で待機期間を管理</h3>
+              <p>1177では、当日連絡、3日以内の医学的評価などの考え方が示されています。</p>
+            </article>
+            <article class="process__step">
+              <span>03</span>
+              <h3>必要に応じ専門医療へ</h3>
+              <p>待機が長すぎる場合、別の医療機関を案内される仕組みがあります。</p>
+            </article>
+          </div>
+          <p class="insight">
+            日本と比べると、<strong>プライマリケアの入り口機能と待機時間管理</strong>を制度として強く意識しているのが見えます。
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-title="強みと課題">
+        <div class="slide__content">
+          <div class="slide__badge">06</div>
+          <p class="kicker">Evaluation</p>
+          <h2>制度の強みと論点</h2>
+          <div class="columns">
+            <article class="panel">
+              <h3>強み</h3>
+              <ul>
+                <li>普遍的カバレッジで無保険リスクが小さい</li>
+                <li>公費比率が高く、家計負担の抑制機能がある</li>
+                <li>デジタル化、患者選択、プライマリケア強化が進んでいる</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>主要課題</h3>
+              <ul>
+                <li>待機時間の短縮</li>
+                <li>地域差と均てん化</li>
+                <li>高齢者ケアでの医療と介護の接続</li>
+              </ul>
+            </article>
+          </div>
+          <div class="warning-box">
+            <strong>深掘り向き論点</strong>
+            <p>「なぜ分権型なのに全国的公平性を保てるのか」「患者自己負担はどこまで低いのか」「日本の後期高齢者医療制度との違い」は次の質問に向いています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="日本との比較視点">
+        <div class="slide__content">
+          <div class="slide__badge">07</div>
+          <p class="kicker">Compare with Japan</p>
+          <h2>比較すると見えやすいポイント</h2>
+          <div class="comparison">
+            <article>
+              <h3>日本</h3>
+              <ul>
+                <li>社会保険方式が中心</li>
+                <li>保険者が複数に分かれる</li>
+                <li>出来高払いの比重が比較的大きい</li>
+              </ul>
+            </article>
+            <article>
+              <h3>スウェーデン</h3>
+              <ul>
+                <li>税方式が中心</li>
+                <li>地域圏が提供責任を広く持つ</li>
+                <li>プライマリケアと待機管理の制度色が強い</li>
+              </ul>
+            </article>
+          </div>
+          <p class="insight">
+            研究の入口としては、<strong>保険制度の違い</strong>よりも、<strong>統治構造と受診行動をどう設計しているか</strong>を比べると理解しやすいです。
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-title="北欧の中での特徴">
+        <div class="slide__content">
+          <div class="slide__badge">08</div>
+          <p class="kicker">Nordic Comparison</p>
+          <h2>北欧諸国の中でもスウェーデンは何が特徴か</h2>
+          <div class="comparison">
+            <article>
+              <h3>北欧共通の土台</h3>
+              <ul>
+                <li>税方式を中心にした普遍的医療保障</li>
+                <li>居住に基づく広いカバレッジ</li>
+                <li>公立病院中心と公平性重視</li>
+              </ul>
+            </article>
+            <article>
+              <h3>スウェーデンらしさ</h3>
+              <ul>
+                <li>北欧の中でも地域分権の色がなお強い</li>
+                <li>自治体が高齢者ケアを広く担い、医療と介護の境界が政策課題になりやすい</li>
+                <li>患者選択、プライマリケア強化、デジタル化を段階的に進めてきた</li>
+              </ul>
+            </article>
+          </div>
+          <div class="columns columns--wide">
+            <article class="panel">
+              <h3>デンマークとの違い</h3>
+              <p>デンマークは2007年改革以降、地域数を大きく絞り、病院再編も強く進めたため、スウェーデンより中央集権化が進んでいます。</p>
+            </article>
+            <article class="panel">
+              <h3>ノルウェーとの違い</h3>
+              <p>ノルウェーは専門病院部門で国の関与がより強く、スウェーデンより病院ガバナンスが上に寄っています。</p>
+            </article>
+          </div>
+          <div class="columns columns--wide">
+            <article class="panel">
+              <h3>フィンランドとの違い</h3>
+              <p>フィンランドは<strong>2023年</strong>に大改革を行い、自治体中心から Well-being Service Counties へ再編し、国財源への依存を強めました。</p>
+            </article>
+            <article class="panel accent">
+              <h3>つまり</h3>
+              <p>スウェーデンは「北欧型」の典型でありながら、<strong>強い地域自治を残したまま全国公平性をどう保つか</strong>が、特に見えやすい国です。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="歴史的背景と変遷">
+        <div class="slide__content">
+          <div class="slide__badge">09</div>
+          <p class="kicker">Historical Development</p>
+          <h2>なぜ今の制度になったのか</h2>
+          <div class="timeline">
+            <div class="timeline__item">
+              <span>19C</span>
+              <div>
+                <h3>地方自治の土台</h3>
+                <p>19世紀以降の地方自治の発達で、地域単位で医療や病院を担う発想が早くから形成されました。後の地域圏中心モデルの土台です。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>1930s-60s</span>
+              <div>
+                <h3>福祉国家の拡大</h3>
+                <p>社会民主主義の下で、普遍主義、公平、所得に左右されないアクセスという発想が強まり、税財源型の福祉国家が拡大しました。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>1970s-80s</span>
+              <div>
+                <h3>低負担・外来重視へ</h3>
+                <p>外来へのアクセス改善、低い患者負担、プライマリケア重視が進み、1982年の Health and Medical Services Act で「必要に応じた平等な医療」が制度理念として明確化されました。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>1992</span>
+              <div>
+                <h3>Ädel改革</h3>
+                <p>高齢者の長期ケアを自治体へ移し、病院に残る退院可能患者を減らす仕組みを強化しました。背景には高齢化、病床効率、連携不全への対処があります。</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <span>2000s-</span>
+              <div>
+                <h3>待機時間、選択、質比較</h3>
+                <p>待機時間問題への対応、プライマリケアの選択制拡大、標準化、全国比較、デジタル化が進みました。近年は分権のままでは質・安全・効率に限界があるとして、国の関与を強める流れもあります。</p>
+              </div>
+            </div>
+          </div>
+          <div class="warning-box">
+            <strong>制度変化を動かした要因</strong>
+            <p>理念だけでなく、感染症中心から慢性疾患・高齢者ケア中心への疾病構造の変化、病床の効率化、待機時間、地域差、科学的ガイドラインとレジストリによる質管理が改革を押してきました。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="出典と次アクション">
+        <div class="slide__content">
+          <div class="slide__badge">10</div>
+          <p class="kicker">Sources</p>
+          <h2>出典と次の深掘り</h2>
+          <div id="sources" class="sources"></div>
+          <div class="next-questions">
+            <h3>次に深掘りしやすい問い</h3>
+            <ul>
+              <li>財源は地方税と国の補助金でどう分かれるか</li>
+              <li>プライマリケア改革は何を変えたか</li>
+              <li>高齢者ケアで自治体が担う範囲はどこまでか</li>
+              <li>患者負担の上限は家計保護として十分か</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

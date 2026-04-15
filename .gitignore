@@ -1,0 +1,4 @@
+chrome-headless-profile/
+*.log
+*.pdf
+*.png
